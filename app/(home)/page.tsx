@@ -12,15 +12,15 @@ import { isFarsi } from "@/utils";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { HeroSwiper } from "../components/hero";
+import { basePath } from "@/site.config";
 
-export default function page() {
+export default function Page() {
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       if (anchor.getAttribute("href") !== "#") {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
-          //@ts-ignore
-
+          //@ts-expect-error cannot infer this
           document.querySelector(this.getAttribute("href")).scrollIntoView({
             behavior: "smooth",
           });
@@ -74,21 +74,21 @@ const BuyTicket = () => {
             <Button>به زودی</Button>
           </div>
           <Image
-            src="/home/world-map-raw.png"
-            alt="hero"
+            src={`${basePath}/home/world-map.png`}
+            alt="world-map"
             fill
-            className="absolute top-0 left-0 w-full h-auto object-contain object-bottom"
+            className=" w-full h-auto object-contain object-bottom"
             sizes="100vw"
             priority
           />
-          <Image
+          {/* <Image
             src="/home/routes.png"
             alt="hero"
             fill
             className="absolute top-0 left-0 w-full h-auto object-contain object-bottom"
             sizes="100vw"
             priority
-          />
+          /> */}
         </div>
       </div>
     </Card>
@@ -96,7 +96,11 @@ const BuyTicket = () => {
 };
 
 const Blog = () => {
-  const images = ["/home/blog-1.jpg", "/home/blog-2.jpg", "/home/blog-3.jpg"];
+  const images = [
+    `${basePath}/home/blog-1.jpg`,
+    `${basePath}/home/blog-1.jpg`,
+    `${basePath}/home/blog-1.jpg`,
+  ];
 
   const { width } = useWindowSize();
 

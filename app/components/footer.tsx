@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { basePath } from "@/site.config";
 export const Footer = () => {
   return (
     <footer className="w-full">
@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="h-full relative overflow-hidden">
           <Image
             style={{ transform: "translateX(2.2%)", scale: 1.11 }}
-            src="/logo/flydubai-blue.svg"
+            src={`${basePath}/logo/flydubai-blue.svg`}
             alt="Logo"
             fill
             className="w-full object-bottom object-contain text-sky-700"

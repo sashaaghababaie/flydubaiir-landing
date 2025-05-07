@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
-import { useWindowSize } from "@/hooks/useWindowSize";
+import { basePath } from "@/site.config";
 
 export const HeroSwiper = () => {
   //   <SwiperSlide>
@@ -49,7 +49,7 @@ export const HeroSwiper = () => {
             <div className={`px-[5%] bg-black`}>
               <div className="w-full max-w-[900px] mx-auto relative aspect-[16/9] bg-black">
                 <Image
-                  src="/home/hero.png"
+                  src={`${basePath}/home/hero.png`}
                   alt="hero"
                   fill
                   className="w-full h-auto object-contain"
@@ -70,7 +70,7 @@ export const HeroSwiper = () => {
             <div className={`px-[5%] bg-black`}>
               <div className="w-full max-w-[900px] mx-auto relative aspect-[16/9] bg-black">
                 <Image
-                  src="/home/hero.png"
+                  src={`${basePath}/home/hero.png`}
                   alt="hero"
                   fill
                   className="w-full h-auto object-contain"
@@ -91,7 +91,7 @@ export const HeroSwiper = () => {
             <div className={`px-[5%] bg-black`}>
               <div className="w-full max-w-[900px] mx-auto relative aspect-[16/9] bg-black">
                 <Image
-                  src="/home/hero.png"
+                  src={`${basePath}/home/hero.png`}
                   alt="hero"
                   fill
                   className="w-full h-auto object-contain"
