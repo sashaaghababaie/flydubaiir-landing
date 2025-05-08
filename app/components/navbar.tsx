@@ -1,3 +1,4 @@
+import { basePath } from "@/site.config";
 import { Button } from "./buttons";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +20,7 @@ export const Navbar = () => {
       <div className="flex gap-3 text-sm">
         {navItems.map((nav, i) => (
           <Link
-          className="hover:text-black/50"
+            className="hover:text-black/50 text-xs sm:text-sm"
             key={`navitem-${i}`}
             href={nav.href}
             target="_blank"
@@ -30,11 +31,11 @@ export const Navbar = () => {
         ))}
       </div>
       <Image
-        src="/logo/flydubai.svg"
+        src={`${basePath}/logo/flydubai.svg`}
         alt="flydubai-logo"
         width={158}
         height={32}
-        className="h-8"
+        className="h-6 sm:h-8"
       />
       <Button>خرید بلیط</Button>
     </nav>

@@ -16,12 +16,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -51,11 +51,14 @@ This set of fonts are used in this project under the license: (.....)
 @font-face {
   font-family: AbarFaNumVF;
   font-weight: 100 900;
-  src: url("/woff2/AbarFaNum-VF.woff2") format("woff2-variations"),
-    url("/woff/AbarFaNum-VF.woff") format("woff"),
-    url("/woff2/AbarFaNum-VF.woff2") format("woff2");
+  src: url("../public/woff2/AbarFaNum-VF.woff2") format("woff2-variations"),
+    url("../public/woff/AbarFaNum-VF.woff") format("woff"),
+    url("../public/woff2/AbarFaNum-VF.woff2") format("woff2");
 }
 
+.swiper {
+  overflow: hidden;
+}
 /* @font-face {
   font-family: AbarLowFaNum;
   font-style: normal;

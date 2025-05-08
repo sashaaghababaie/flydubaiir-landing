@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="w-full">
       <div className="w-full aspect-[500/210] relative">
-        <div className="absolute w-full h-full bg-gradient-to-t from-white z-2"></div>
+        <div className="absolute w-full h-full bg-gradient-to-t from-white z-2">&nbsp;</div>
         <div className="h-full relative overflow-hidden">
           <Image
             style={{ transform: "translateX(2.2%)", scale: 1.11 }}

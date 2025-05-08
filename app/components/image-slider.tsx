@@ -16,11 +16,11 @@ export const ImageSwiper = ({ images }: { images: string[] }) => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="w-full h-full"
+        className="h-full w-full rounded-b-3xl"
       >
         {images.map((image, i) => (
           <SwiperSlide key={`image-${i}`}>
-            <div className="relative w-full h-full">
+            <div className="relative h-full w-full">
               <Image src={image} alt="image" className="object-cover" fill />
             </div>
           </SwiperSlide>

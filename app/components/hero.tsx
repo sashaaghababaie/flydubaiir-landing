@@ -43,16 +43,16 @@ export const HeroSwiper = () => {
           // }}
           // navigation={true}
           modules={[Autoplay]}
-          className="w-full"
+          className="w-full rounded-3xl"
         >
           <SwiperSlide>
-            <div className={`px-[5%] bg-black`}>
-              <div className="w-full max-w-[900px] mx-auto relative aspect-[16/9] bg-black">
+            <div className={`bg-black px-[5%]`}>
+              <div className="relative mx-auto aspect-[16/9] w-full max-w-[900px] bg-black">
                 <Image
                   src={`${basePath}/home/hero.png`}
                   alt="hero"
                   fill
-                  className="w-full h-auto object-contain"
+                  className="h-auto w-full object-contain"
                   sizes="100vw"
                   priority
                 />
@@ -60,20 +60,20 @@ export const HeroSwiper = () => {
 
               <p
                 style={{ fontSize: "clamp(1rem,4vw,3rem)" }}
-                className="text-center font-black pb-16 text-white"
+                className="pb-16 text-center font-black text-white"
               >
                 انتخابی برای هر لحظه
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={`px-[5%] bg-black`}>
-              <div className="w-full max-w-[900px] mx-auto relative aspect-[16/9] bg-black">
+            <div className={`bg-black px-[5%]`}>
+              <div className="relative mx-auto aspect-[16/9] w-full max-w-[900px] bg-black">
                 <Image
                   src={`${basePath}/home/hero.png`}
                   alt="hero"
                   fill
-                  className="w-full h-auto object-contain"
+                  className="h-auto w-full object-contain"
                   sizes="100vw"
                   priority
                 />
@@ -81,20 +81,20 @@ export const HeroSwiper = () => {
 
               <p
                 style={{ fontSize: "clamp(1rem,4vw,3rem)" }}
-                className="text-center font-black pb-16 text-white"
+                className="pb-16 text-center font-black text-white"
               >
                 انتخابی برای هر لحظه
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={`px-[5%] bg-black`}>
-              <div className="w-full max-w-[900px] mx-auto relative aspect-[16/9] bg-black">
+            <div className={`bg-black px-[5%]`}>
+              <div className="relative mx-auto aspect-[16/9] w-full max-w-[900px] bg-black">
                 <Image
                   src={`${basePath}/home/hero.png`}
                   alt="hero"
                   fill
-                  className="w-full h-auto object-contain"
+                  className="h-auto w-full object-contain"
                   sizes="100vw"
                   priority
                 />
@@ -102,7 +102,7 @@ export const HeroSwiper = () => {
 
               <p
                 style={{ fontSize: "clamp(1rem,4vw,3rem)" }}
-                className="text-center font-black pb-16 text-white"
+                className="pb-16 text-center font-black text-white"
               >
                 انتخابی برای هر لحظه
               </p>
@@ -117,8 +117,8 @@ export const HeroSwiper = () => {
 export const Hero = () => {
   return (
     <Card>
-      <div className="px-[5%] bg-black">
-        <div className="w-full relative aspect-[16/9] bg-black">
+      <div className="bg-black px-[5%]">
+        <div className="relative aspect-[16/9] w-full bg-black">
           {/* <Image
       src="/home/hero.png"
       alt="hero"
@@ -132,7 +132,7 @@ export const Hero = () => {
             src="/home/hero.png"
             alt="hero"
             fill
-            className="w-full h-auto object-contain"
+            className="h-auto w-full object-contain"
             sizes="100vw"
             priority
           />
@@ -140,7 +140,7 @@ export const Hero = () => {
 
         <p
           style={{ fontSize: "clamp(1rem,4vw,3rem)" }}
-          className="text-center font-black pb-16 text-white"
+          className="pb-16 text-center font-black text-white"
         >
           انتخابی برای هر لحظه
         </p>

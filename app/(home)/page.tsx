@@ -33,7 +33,7 @@ export default function Page() {
     <div className="font-abar-low">
       <div style={{ padding: "0px clamp(8px,3vw,56px" }}>
         <Navbar />
-        <main className="flex flex-col pt-2 gap-10">
+        <main className="flex flex-col gap-10 pt-2">
           <HeroSwiper />
           <BuyTicket />
           <Blog />
@@ -55,29 +55,31 @@ const BuyTicket = () => {
             className="px-8 pt-[6%] text-center font-black"
           >
             همین حالا سفر بعدی خود را
-            <span className="relative mx-[1%] inline-block before:absolute before:-left-[10%] before:top-[25%] before:bottom-[15%] before:right-0 before:-rotate-2  before:block before:bg-orange-400">
+            <span className="relative mx-[1%] inline-block before:absolute before:top-[25%] before:right-0 before:bottom-[15%] before:-left-[10%] before:block before:-rotate-2 before:bg-orange-400">
               <span className="relative">رزرو</span>
             </span>
             کنید
           </p>
         </div>
-        <div className="w-full relative aspect-[16/9] bg-black bg-sky-700/30">
+        <div className="relative aspect-[16/9] w-full bg-sky-700/30">
           <p
             style={{ fontSize: "clamp(0.9rem,2vw,2rem)" }}
-            className="relative z-2 px-8 pt-[4%] text-center font-normal z-2"
+            className="relative z-2 px-8 pt-[4%] text-center font-normal"
           >
             سفر از ۸ نقطه کلیدی به سراسر جهان!
           </p>
-          <div className="absolute top-0 w-full bg-[#f5f5f5] h-[5svh] z-1"></div>
-          <div className="absolute top-[5svh] w-full bg-gradient-to-b from-[#f5f5f5] h-[15svh] z-1"></div>
-          <div className="absolute z-1 py-10 flex w-full justify-center">
+          <div className="absolute top-0 z-1 h-[5svh] w-full bg-[#f5f5f5]"></div>
+          <div className="absolute top-[5svh] z-1 h-[15svh] w-full bg-gradient-to-b from-[#f5f5f5]">
+            &nbsp;
+          </div>
+          <div className="absolute z-1 flex w-full justify-center py-10">
             <Button>به زودی</Button>
           </div>
           <Image
             src={`${basePath}/home/world-map.png`}
             alt="world-map"
             fill
-            className=" w-full h-auto object-contain object-bottom"
+            className="h-auto w-full object-contain object-bottom"
             sizes="100vw"
             priority
           />
@@ -98,8 +100,8 @@ const BuyTicket = () => {
 const Blog = () => {
   const images = [
     `${basePath}/home/blog-1.jpg`,
-    `${basePath}/home/blog-1.jpg`,
-    `${basePath}/home/blog-1.jpg`,
+    `${basePath}/home/blog-2.jpg`,
+    `${basePath}/home/blog-3.jpg`,
   ];
 
   const { width } = useWindowSize();
@@ -107,35 +109,35 @@ const Blog = () => {
   return (
     <Card>
       <div className="bg-[#f5f5f5]">
-        <div className="px-[10%] md:[px-[20%] flex flex-col items-center">
+        <div className="md:[px-[20%] flex flex-col items-center px-[10%]">
           <h2
             style={{ fontSize: "clamp(1rem,3vw,3rem)" }}
-            className="text-center font-black text-black py-[6vw]"
+            className="py-[6vw] text-center font-black text-black"
           >
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از
           </h2>
           <p
             style={{ fontSize: "clamp(0.9rem,2vw,1.2rem)" }}
-            className="text-center line-clamp-3 mb-12"
+            className="mb-12 line-clamp-3 text-center"
           >
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است
           </p>
           <Link
-            className="text-black/70 hover:text-black/50 underline underline-offset-6 text-sm mb-16"
+            className="mb-16 text-sm text-black/70 underline underline-offset-6 hover:text-black/50"
             href="#"
           >
             بیشتر بخوانید
           </Link>
         </div>
         {width <= 720 ? (
-          <div className="w-full aspect-[16/9]">
+          <div className="aspect-[16/9] w-full">
             <ImageSwiper images={images} />
           </div>
         ) : (
-          <div className="flex justify-between h-[30svh] w-full gap-2">
+          <div className="flex h-[30svh] w-full justify-between gap-2">
             {images.map((image, i) => (
               <div key={`image-${i}`} className="relative h-full w-full">
                 <Image src={image} alt="image" className="object-cover" fill />
@@ -176,7 +178,7 @@ const Contact = () => {
     <Card id="contact">
       <div className="relative py-[6%]">
         <div className="relative z-1 flex flex-col items-center">
-          <div className="pb-8 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center pb-8">
             <BiSolidMessageDots
               style={{ fontSize: "clamp(3rem,4vw,4rem)" }}
               className="text-sky-700"
@@ -188,10 +190,10 @@ const Contact = () => {
               تماس با ما
             </h2>
           </div>
-          <div className="px-[10%] flex w-full flex-col items-center justify-center md:flex-row md:justify-between px-[10%]">
+          <div className="flex w-full flex-col items-center justify-center px-[10%] md:flex-row md:justify-between">
             {contactItems.map((c, i) => (
               <div key={`contact-${i}`} className="py-2">
-                <p className="text-xs text-black/50 text-center py-2">
+                <p className="py-2 text-center text-xs text-black/50">
                   {c.title}
                 </p>
                 {c.href !== "#" ? (
@@ -210,9 +212,13 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="absolute top-0 w-full h-full flex">
-          <div className="w-full bg-gradient-to-bl from-amber-50/50 to-orange-300/80"></div>
-          <div className="w-full bg-gradient-to-br from-amber-50/50 to-orange-300/80"></div>
+        <div className="absolute top-0 flex h-full w-full">
+          <div className="w-full bg-gradient-to-bl from-amber-50/50 to-orange-300/80">
+            &nbsp;
+          </div>
+          <div className="w-full bg-gradient-to-br from-amber-50/50 to-orange-300/80">
+            &nbsp;
+          </div>
         </div>
       </div>
     </Card>

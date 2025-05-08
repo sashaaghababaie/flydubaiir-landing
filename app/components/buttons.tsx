@@ -11,7 +11,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       {...props}
-      className={`hover:cursor-pointer rounded-full px-5 py-2 ${
+      className={`hover:cursor-pointer rounded-full px-5 py-2 text-xs sm:text-sm ${
         props.color ? colors[props.color] : colors.primary
       }`}
     >
